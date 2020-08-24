@@ -6,11 +6,34 @@ import Jayaram from './component/class';
 import State from './component/state';
 import Nav from './component/nav';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import { Button } from '@material-ui/core';
+import Forms from './component/forms';
+import List from './component/list';
+import Api from './component/api';
 function App() {
+
+  
+
+  
   return (
+
     <Router>
     <div className="App">
-    
+    <Button variant="contained">Default</Button>
+<Button variant="contained" color="primary">
+  Primary
+</Button>
+<Button variant="contained" color="secondary">
+  Secondary
+</Button>
+<Button variant="contained" disabled>
+  Disabled
+</Button>
+<Button variant="contained" color="primary" href="#contained-buttons">
+  Link
+</Button>
+
+
      <Nav></Nav>
      <Switch>
     
@@ -18,7 +41,11 @@ function App() {
      
      <Route path="/jayaram" component={Jayaram}></Route>
       <Route path="/jay" component={Jay}></Route> 
+      <Route path="/form" component={Forms}></Route> 
+      <Route path="/list" component={Jayaram }></Route> 
+      <Route path="/api" component={Api}></Route> 
       <Route path="/" component={Home}></Route>
+   
       </Switch>
       
       {/* <State></State>
