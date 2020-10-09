@@ -8,6 +8,9 @@ import Navbar from './home/nav';
 import Menus from './menu/menu';
 import Carousel from './home/carousel';
 import Usesatate from './hooks/usestatehook';
+import Booklist from './context/dataresiving';
+import Params from './home/params';
+import Getmethode from './restapi/getmethode';
 
 function App() {
   return (
@@ -29,7 +32,9 @@ function App() {
      <Route path="/home" component={Carousel}></Route>
      <Route path="/menu" component={Menus}></Route>
      <Route path = "/usehook" component={Usesatate}></Route>
-     <Route path="/" component={Carousel}></Route>
+     <Route path = "/context" component={Booklist}></Route>
+     <Route path="/restapi" component={Getmethode}/>
+     <Route path="/:post_id" component={Params}></Route>
      
   
      </Switch>

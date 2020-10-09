@@ -1,9 +1,12 @@
 // import { useState } from "react";
 import React , {useState} from 'react';
-import Objecthook from './objectusestatehook';
+import Objecthook, { Mcontext } from './objectusestatehook';
 
-function Usesatate() {
-   
+function Usesatate(props) {
+    setTimeout(()=>{
+        props.history.push('/home')
+        // after 2 seconds Navigator to home
+    },2000)
     const [count,setCount] = useState(0)
     const initail = 0;
     
@@ -13,6 +16,7 @@ function Usesatate() {
      }
 return(
 <div>
+   
     <h1 className="text-center text-danger"> usestate hook </h1>
     <div>
 <button onClick={()=>setCount(count + 1)}> count {count}</button>

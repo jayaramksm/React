@@ -1,5 +1,6 @@
-import React, { useState } from "react"
-function Objecthook(){
+import React, { createContext, useState } from "react"
+export const Mcontext = createContext()
+function Objecthook(props){
     const [name,setneme] = useState({firstname:"",lastname:""})
 
     return(
@@ -11,6 +12,9 @@ function Objecthook(){
     <h2>secondname : {name.lastname}</h2>
     <h2>{JSON.stringify(name)}</h2>
             </div>
+            <Mcontext.Provider value={name}>
+                {props.children }
+            </Mcontext.Provider>
         </div>  
     )
 }
