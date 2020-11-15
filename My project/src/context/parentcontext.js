@@ -16,7 +16,7 @@ class ThemeContext extends Component {
      }
     render() { 
         return (
-            <Themcreat.Provider value='btn btn-dark'>
+            <Themcreat.Provider value={'btn btn-dark'}>
               {this.props.children}
             </Themcreat.Provider>
           );

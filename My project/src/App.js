@@ -11,10 +11,14 @@ import Usesatate from './hooks/usestatehook';
 import Booklist from './context/dataresiving';
 import Params from './home/params';
 import Getmethode from './restapi/getmethode';
-
+import LifecycleA from './lifeCycles/componentlife_cycle_A';
+export const userText = React.createContext()
 function App() {
   return (
    <div>
+     <userText.Provider value={"jayaram kasim "}>
+
+     </userText.Provider>
       <Router>
 <PrimarySearchAppBar></PrimarySearchAppBar>
 
@@ -29,12 +33,13 @@ function App() {
      <Route path="/list" component={Jayaram }></Route> 
      <Route path="/api" component={Api}></Route>  */}
      
-     <Route path="/home" component={Carousel}></Route>
+     <Route exact path="/" component={Carousel}></Route>
      <Route path="/menu" component={Menus}></Route>
      <Route path = "/usehook" component={Usesatate}></Route>
      <Route path = "/context" component={Booklist}></Route>
      <Route path="/restapi" component={Getmethode}/>
-     <Route path="/:post_id" component={Params}></Route>
+     <Route path="/lifecycle" component={LifecycleA}/>
+     <Route path="/post/:post_id" component={Params}></Route>
      
   
      </Switch>

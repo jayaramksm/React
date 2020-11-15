@@ -4,7 +4,8 @@ import Objecthook, { Mcontext } from './objectusestatehook';
 
 function Usesatate(props) {
     setTimeout(()=>{
-        props.history.push('/home')
+        console.log(props)
+        props.history.push('/')
         // after 2 seconds Navigator to home
     },2000)
     const [count,setCount] = useState(0)

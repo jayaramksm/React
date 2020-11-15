@@ -48,7 +48,7 @@ class Getmethode extends Component {
                 {res.body}
             </div>
             <div className="card-footer text-right">
-                <button className="btn btn-primary texy-white"> <Link className="text-white" to={'/'+res.id} >Read more..</Link></button>
+                <button className="btn btn-primary texy-white"> <Link className="text-white" to={'/post/'+res.id} >Read more..</Link></button>
             </div>
             </div>
             </div>
